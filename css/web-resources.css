@@ -1,0 +1,158 @@
+/* web-resources.css — versión 1.0.0 */
+
+/* -------------- Variables -------------- */
+:root{
+  --wr-bg: #ffffff;
+  --wr-text: #222;
+  --wr-accent: #4aa3a6;
+  --wr-muted: #6b6b6b;
+  --wr-radius: 8px;
+  --wr-gap: 1rem;
+  --wr-container-width: 1100px;
+  --wr-shadow: 0 6px 18px rgba(17,17,17,0.06);
+  --wr-transition: 0.18s ease;
+  --wr-font: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Dark theme via prefers-color-scheme */
+@media (prefers-color-scheme: dark){
+  :root{
+    --wr-bg: #121214;
+    --wr-text: #e6e6e6;
+    --wr-accent: #66c6c8;
+    --wr-muted: #bdbdbd;
+    --wr-shadow: 0 6px 24px rgba(0,0,0,0.6);
+  }
+}
+
+/* -------------- Reset ligero -------------- */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--wr-font);
+  color:var(--wr-text);
+  background:var(--wr-bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+
+/* -------------- Container -------------- */
+.wr-container{
+  width:100%;
+  max-width:var(--wr-container-width);
+  padding:0 1rem;
+  margin:0 auto;
+}
+
+/* -------------- Grid (responsive) -------------- */
+.wr-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:var(--wr-gap);
+}
+
+.wr-col{
+  flex:1 1 0%;
+  min-width:0;
+}
+
+/* Helpers para columnas (simples) */
+.wr-col-1{flex:0 0 8.333%}
+.wr-col-2{flex:0 0 16.666%}
+.wr-col-3{flex:0 0 25%}
+.wr-col-4{flex:0 0 33.333%}
+.wr-col-6{flex:0 0 50%}
+.wr-col-12{flex:0 0 100%}
+
+/* Media queries para adaptar */
+@media (max-width:900px){
+  .wr-col-3,.wr-col-4,.wr-col-2{flex:0 0 50%}
+}
+@media (max-width:520px){
+  .wr-row{gap:0.75rem}
+  .wr-col-1,.wr-col-2,.wr-col-3,.wr-col-4,.wr-col-6{flex:0 0 100%}
+}
+
+/* -------------- Buttons -------------- */
+.wr-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  padding:0.5rem 1rem;
+  background:var(--wr-accent);
+  color: #fff;
+  border:none;
+  border-radius:var(--wr-radius);
+  cursor:pointer;
+  text-decoration:none;
+  font-weight:600;
+  transition: transform var(--wr-transition), box-shadow var(--wr-transition);
+  box-shadow: var(--wr-shadow);
+}
+.wr-btn:hover{ transform:translateY(-3px) }
+.wr-btn.secondary{
+  background:transparent;
+  color:var(--wr-text);
+  border:1px solid rgba(0,0,0,0.06);
+}
+
+/* -------------- Cards -------------- */
+.wr-card{
+  background:var(--wr-bg);
+  border-radius:var(--wr-radius);
+  padding:1rem;
+  border:1px solid rgba(0,0,0,0.04);
+  box-shadow:var(--wr-shadow);
+}
+
+/* -------------- Typography -------------- */
+.wr-h1{font-size:2.25rem;margin:0 0 0.5rem}
+.wr-h2{font-size:1.5rem;margin:0 0 0.5rem}
+.wr-lead{font-size:1.0625rem;color:var(--wr-muted)}
+
+/* -------------- Utilities -------------- */
+.text-center{text-align:center}
+.mr-auto{margin-right:auto}
+.mb-1{margin-bottom:0.5rem}
+.mb-2{margin-bottom:1rem}
+.p-1{padding:0.5rem}
+.p-2{padding:1rem}
+
+/* -------------- Forms -------------- */
+.wr-input, .wr-textarea, .wr-select{
+  width:100%;
+  padding:0.6rem 0.75rem;
+  border-radius:6px;
+  border:1px solid rgba(0,0,0,0.08);
+  background:transparent;
+  color:var(--wr-text);
+  font-size:1rem;
+}
+.wr-textarea{min-height:120px;resize:vertical}
+
+/* -------------- Nav simple -------------- */
+.wr-nav{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.wr-nav a{
+  color:var(--wr-text);
+  text-decoration:none;
+  padding:0.35rem 0.5rem;
+  border-radius:6px;
+}
+.wr-nav a:hover{ background:rgba(0,0,0,0.04) }
+
+/* -------------- Small responsive helpers -------------- */
+@media (max-width:600px){
+  .wr-h1{font-size:1.6rem}
+  .wr-h2{font-size:1.2rem}
+}
+
+/* End of web-resources.css */
+

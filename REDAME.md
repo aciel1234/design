@@ -1,14 +1,10 @@
-# Mi Estilo
+# Web Resources — Mini CSS Toolkit
 
-Esta es una biblioteca de estilos CSS que puedes utilizar en tus proyectos.
+Publica este repo con GitHub Pages o usa jsDelivr para ofrecer un CSS que otros puedan incluir via `<link>`.
 
-## Cómo Usar
-
-Para incluir los estilos en tu proyecto, añade la siguiente línea en el <head> de tu HTML:
-
-html
-<link rel="stylesheet" href="https://tu-usuario.github.io/mi-estilo/css/estilos.css">
-
-## Clases Disponibles
-
-- .button: Estilo para botones.
+## Uso (GitHub Pages)
+1. Coloca `web-resources.css` en `css/`.
+2. Publica el repo en GitHub Pages (Settings → Pages → branch `main` / folder `/root` o `/docs`).
+3. En tu página HTML añade:
+```html
+<link rel="stylesheet" href="https://TU_USUARIO.github.io/TU_REPO/css/web-resources.css">

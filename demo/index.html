@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Web Resources</title>
+
+  <!-- === OPCIÓN A (GitHub Pages) ===
+       Después de publicar tu repo en GitHub Pages, reemplaza:
+       https://<tu-usuario>.github.io/<tu-repo>/css/web-resources.css
+  -->
+  <link rel="stylesheet" href="https://TU_USUARIO.github.io/TU_REPO/css/web-resources.css">
+
+  <!-- === OPCIÓN B (jsDelivr CDN — alternativa recomendada estable):
+       Reemplaza TU_USUARIO y TU_REPO por los reales, y puedes fijar versión @v1.0.0 si quieres.
+       Ej: https://cdn.jsdelivr.net/gh/miusuario/web-resources@v1.0.0/css/web-resources.css
+  -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TU_USUARIO/TU_REPO@main/css/web-resources.css"> -->
+
+</head>
+<body>
+
+  <header class="wr-card wr-container text-center mb-2">
+    <h1 class="wr-h1">Web Resources — Demo</h1>
+    <p class="wr-lead">Incluye este stylesheet con &lt;link&gt; y usa utilidades como <code>.wr-btn</code>, <code>.wr-row</code>, etc.</p>
+  </header>
+
+  <main class="wr-container">
+    <section class="wr-row mb-2">
+      <div class="wr-col wr-card">
+        <h2 class="wr-h2">Botones</h2>
+        <a class="wr-btn" href="#">Primary</a>
+        <a class="wr-btn secondary" href="#">Secondary</a>
+      </div>
+
+      <div class="wr-col wr-card">
+        <h2 class="wr-h2">Formulario</h2>
+        <input class="wr-input mb-1" placeholder="Nombre">
+        <textarea class="wr-textarea mb-1" placeholder="Mensaje"></textarea>
+        <button class="wr-btn">Enviar</button>
+      </div>
+    </section>
+
+    <section class="wr-row">
+      <div class="wr-col-6 wr-card">
+        <h3 class="wr-h2">Card</h3>
+        <p class="wr-lead">Un ejemplo de tarjeta con sombra y padding.</p>
+      </div>
+      <div class="wr-col-6 wr-card">
+        <h3 class="wr-h2">Grid</h3>
+        <p>Flex grid simple con utilidades de columnas.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+
