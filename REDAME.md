@@ -1,10 +1,4 @@
-# Web Resources — Mini CSS Toolkit
+# Web Dev Resources — CSS Toolkit
+1. En tu página HTML añade:
 
-Publica este repo con GitHub Pages o usa jsDelivr para ofrecer un CSS que otros puedan incluir via `<link>`.
-
-## Uso (GitHub Pages)
-1. Coloca `web-resources.css` en `css/`.
-2. Publica el repo en GitHub Pages (Settings → Pages → branch `main` / folder `/root` o `/docs`).
-3. En tu página HTML añade:
-```html
-<link rel="stylesheet" href="https://TU_USUARIO.github.io/TU_REPO/css/web-resources.css">
+<link rel="stylesheet" href="https://aciel1234.github.io/design@latest/css/web-resources.css">
