@@ -1,0 +1,232 @@
+/* ---------------- Variables ---------------- */
+:root {
+  --wr-bg: #fff;
+  --wr-text: #222;
+  --wr-accent: #4aa3a6;
+  --wr-muted: #6b6b6b;
+  --wr-radius: 8px;
+  --wr-gap: 1rem;
+  --wr-shadow: 0 6px 18px rgba(17,17,17,0.06);
+  --wr-transition: 0.18s ease;
+  --wr-font: "Inter", Arial, sans-serif;
+
+  --color-white: #fff;
+  --color-dark-bg: #17233b;
+  --color-orange: orange;
+}
+
+/* ---------------- General ---------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  background: url("img/bg.jpg") no-repeat center/cover;
+  color: var(--color-white);
+}
+
+/* Cards y bloques con mismos estilos */
+.bloque,
+.descripcion > p,
+.descripcion .card,
+.produccion p,
+.apoyo p,
+.diseñador {
+  font-family: var(--wr-font);
+  line-height: 1.6;
+  padding: 1rem;
+  border-radius: var(--wr-radius);
+  backdrop-filter: blur(80px);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  box-shadow: 0px 0px 30px rgba(227,228,237,0.37);
+}
+
+/* ---------------- Header ---------------- */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  backdrop-filter: blur(30px);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  box-shadow: 0 0 30px rgba(227,228,237,0.37);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo h3 {
+  color: var(--color-orange);
+}
+
+header nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+header nav ul a {
+  text-decoration: none;
+  color: white;
+  transition: var(--wr-transition);
+}
+
+header nav ul a:hover {
+  opacity: .7;
+}
+
+/* ---------------- Presentación ---------------- */
+.presentacion {
+  padding: 4rem 10rem;
+}
+.presentacion p {
+  font-size: 50px;
+  margin-top: 4rem;
+  line-height: 1.4;
+}
+.presentacion span:nth-child(-n+3) { color: var(--color-orange); }
+.presentacion span { color: #4a94a6; }
+
+/* ---------------- Descripción ---------------- */
+section {
+  padding: 0 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.descripcion h3,
+.produccion h2,
+.apoyo h2,
+.team h2 {
+  margin: 30px 0;
+  font-size: 40px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1rem;
+}
+
+.card p i {
+  color: var(--color-orange);
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+/* ---------------- Apoyo ---------------- */
+.apoyo a {
+  color: var(--color-orange);
+  text-decoration: none;
+}
+
+.apoyo a i {
+  margin-right: 5px;
+}
+
+/* ---------------- Team ---------------- */
+.diseñador {
+  text-align: center;
+}
+.diseñador img {
+  margin: 30px 0;
+  border-radius: 8px;
+}
+.diseñador h4 {
+  font-weight: 300;
+  color: #d1d1d1;
+}
+.diseñador a {
+  color: #4a6fa6;
+  font-size: 25px;
+}
+.diseñador a:hover {
+  color: #64a5b9;
+}
+
+/* ---------------- Footer ---------------- */
+.pie-pagina {
+  background-color: #0a141d;
+  margin-top: 4rem;
+  color: #efefef;
+}
+
+.pie-pagina .grupo-1 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 0;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 50px;
+}
+
+.pie-pagina .grupo-1 figure a, .red-social a, .box p a, .grupo-2 a {
+  text-decoration: none;
+}
+
+.pie-pagina h1 i { color: white; }
+.pie-pagina h1 { color: var(--color-orange); }
+
+.red-social a {
+  color: white;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  display: inline-block;
+  margin-right: 10px;
+  background: #0d2033;
+  text-align: center;
+  transition: var(--wr-transition);
+}
+
+.red-social a:hover { color: aqua; }
+
+.grupo-2 {
+  background-color: #0a1a2a;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.box p a {
+  color: white;
+}
+.grupo-2 a {
+  color: white;
+}
+.box h2 {
+  line-height: 50px;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 970px) {
+  .presentacion p { font-size: 40px; }
+}
+
+@media (max-width: 900px) {
+  .pie-pagina .grupo-1 {
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+  }
+}
+
+@media (max-width: 840px) {
+  .presentacion p { font-size: 30px; }
+}
+
+@media (max-width: 800px) {
+  section { padding: 1rem 3rem; }
+  .pie-pagina .grupo-1 { grid-template-columns: 1fr; }
+  .descripcion h3,
+  .produccion h2,
+  .apoyo h2,
+  .team h2 {
+    font-size: 25px;
+  }
+}

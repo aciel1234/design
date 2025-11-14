@@ -45,9 +45,11 @@ header {
   box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
 }
 
-.logo {
+.logo a {
+  text-decoration: none;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .logo h3 {
