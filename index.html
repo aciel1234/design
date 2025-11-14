@@ -2,60 +2,88 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Poderosa librería para frontend devs. Crea y utiliza componentes predefinidos, y dale vida a tus proyectos con grandes estilos CSS">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Poderosa librería para frontend devs. Crea componentes predefinidos y estilos CSS avanzados.">
   <meta name="author" content="Aciel Olivera García">
+
   <title>Design Web Resources</title>
+
   <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 
   <header id="header">
     <div class="logo">
-      <i class="fa-regular fa-clone"></i><h3>DWR</h3>
+      <i class="fa-regular fa-clone"></i>
+      <h3>DWR</h3>
     </div>
-    <ul>
-      <li><a href="about.html">Acerca del proyecto</a></li>
-      <li><a href="docs/docs.html">Documentación</a></li>
-      <li><a href="https://www.facebook.com/aciel.dev.2025" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a></li>
-    </ul>
+
+    <nav>
+      <ul>
+        <li><a href="about.html">Acerca del proyecto</a></li>
+        <li><a href="docs/docs.html">Documentación</a></li>
+        <li>
+          <a href="https://www.facebook.com/aciel.dev.2025" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <div class="presentacion">
+    <section class="presentacion">
       <h1>Librería de estilos para tus páginas web</h1>
       <h4>Automatizado. Servicio estable y seguro.</h4>
 
       <article>
         <p>// cargar los estilos, click para copiar al portapapeles</p>
-        <code id="copiar-codigo">&lt;link rel="stylesheet" href="https://aciel1234.github.io/design@latest/css/web-resources.css"&gt;</code>
+        <code id="copiar-codigo">
+          &lt;link rel="stylesheet" href="https://aciel1234.github.io/design@latest/css/web-resources.css"&gt;
+        </code>
+
         <div class="docs-link">
-          <a href="docs/docs.html" rel="noopener"><i class="fa-solid fa-book"></i>Full docs</a>
+          <a href="docs/docs.html" rel="noopener noreferrer">
+            <i class="fa-solid fa-book"></i>Full docs
+          </a>
         </div>
+
         <div class="notification" id="feedbackElement"></div>
       </article>
-    </div>
-    
-    <div class="hosted">
+    </section>
+
+    <section class="hosted">
       <h4><span>D</span>esign <span>W</span>eb <span>R</span>esources funciona gracias a:</h4>
+
       <div class="icons">
-        <a href="https://github.com"><i class="fab fa-github"></i></a>
-        <a href="https://jsdelivr.com"><i><img src="img/jsdelivr.png" alt="jsdelivr logo"></i></a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://jsdelivr.com" target="_blank" rel="noopener noreferrer">
+          <img src="img/jsdelivr.png" alt="Logo jsDelivr">
+        </a>
       </div>
-    </div>
+    </section>
 
-
-    <!-- Sección para ejemplo de uso -->
+    <!-- Ejemplo de uso -->
     <section class="wr-container">
-      <h1>Construye tu web a con <span>variables CSS</span> a tiempo real</h1>
-      <h3><span>DWR</span> proporciona variedad de colores, tipografías y más para usarlas donde quieras. Puedes modificar los estilos según tus preferencias.</h3>
+      <h1>Construye tu web con <span>variables CSS</span> en tiempo real</h1>
+      <h3>
+        <span>DWR</span> proporciona colores, tipografías y más para usarlas donde quieras.
+      </h3>
 
-      <p class="des">Usa cualquiera de las <span>variables globales</span> para escribir nuevos estilos. Estas usan la sintaxis <code>var(--global-variableName)</code>.</p>
+      <p class="des">
+        Usa cualquiera de las <span>variables globales</span> con la sintaxis 
+        <code>var(--global-variableName)</code>.
+      </p>
+
       <article class="ejemplo-codigo">
         <code>
-          :root{<br>
+          :root {<br>
             --global-bg: #ffffff;<br>
             --global-text: #222;<br>
             --global-accent: #4aa3a6;<br>
@@ -66,80 +94,102 @@
             --global-shadow: 0 6px 18px rgba(17,17,17,0.06);<br>
             --global-transition: 0.18s ease;<br>
             --global-font: "Inter", "Helvetica Neue", Arial, sans-serif;<br>
-          }<br>
-          </code>
+          }
+        </code>
       </article>
     </section>
 
+    <!-- Componentes -->
     <section class="wr-container block">
       <h1>Estiliza los componentes</h1>
-      <p class="des">Añade cualquiera de las <span>clases predefinidas</span> a los componentes para modificar su vista, como los botones en el ejemplo de abajo. Existe variedad de clases disponibles. Combínalas para tener estilos más avanzados.</p>
-      <section class="wr-row mb-2">
+
+      <p class="des">
+        Usa <span>clases predefinidas</span> para modificar la vista de los componentes.
+      </p>
+
+      <div class="wr-row mb-2">
         <div class="wr-col wr-card">
           <a class="wr-btn" href="#">Primary</a>
           <a class="wr-btn secondary" href="#">Secondary</a>
         </div>
-      </section>
+      </div>
+
       <article class="ejemplo-codigo comp">
         <code>
-          &ltsection class="wr-row mb-2 block"&gt <br>
-            &ltdiv class="wr-col wr-card"&gt <br>
-              &lta class="wr-btn" href="#"&gtPrimary&lt/a&gt <br>
-              &lta class="wr-btn secondary" href="#"&gtSecondary&lt/a&gt<br>
-            &lt/div&gt<br>
-      &lt/section&gt
-          </code>
+&lt;section class="wr-row mb-2 block"&gt;<br>
+  &lt;div class="wr-col wr-card"&gt;<br>
+    &lt;a class="wr-btn" href="#"&gt;Primary&lt;/a&gt;<br>
+    &lt;a class="wr-btn secondary" href="#"&gt;Secondary&lt;/a&gt;<br>
+  &lt;/div&gt;<br>
+&lt;/section&gt;
+        </code>
       </article>
     </section>
 
+    <!-- Ejemplos -->
     <section class="wr-container block">
       <h1>¿Te cuesta el desarrollo web?</h1>
-      <h3><span>DWR</span> te ofrece componentes ya definidos para copiar y pegar en tu página web.
+      <h3><span>DWR</span> te ofrece componentes listos para usar.</h3>
 
-    <div class="row">
-        <img src="img/ejemplos.jpg" alt="imagen de ejemplo1">
-        <img src="img/ejemplos2.jpg" alt="imagen de ejemplo2">
-        <img src="img/ejemplos4.jpg" alt="imagen de ejemplo3">
-		</div>
+      <div class="row">
+        <img src="img/ejemplos.jpg" alt="Ejemplo 1">
+        <img src="img/ejemplos2.jpg" alt="Ejemplo 2">
+        <img src="img/ejemplos4.jpg" alt="Ejemplo 3">
+      </div>
 
-    <div class="docs-link">
-      <a href="predefined/pre.html" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i>Ver más</a>
-    </div>
+      <div class="docs-link">
+        <a href="predefined/pre.html" rel="noopener noreferrer">
+          <i class="fa-solid fa-up-right-from-square"></i>Ver más
+        </a>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#header">
-                        <h1><i class="fa-regular fa-clone"></i>DWR</h1>
-                    </a>
-                </figure>
-            </div>
-            <div class="box">
-                <h2>Sobre el proyecto</h2>
-                <p>Iniciado en el mes de Noviembre de 2025.</p>
-                <p>Con visión de ser la librería #1 para el apoyo de todos los desarrolladores web.</p>
-            </div>
-            <div class="box">
-                <h2>Sigue</h2>
-                <div class="red-social">
-                    <a href="https://www.facebook.com/aciel.dev.2025" class="fa fa-facebook" target="_blank" rel="noopener"></a>
-                    <a href="https://www.youtube.com/@acielolivera" class="fa fa-youtube" target="_blank" rel="noopener"></a>
-                </div>
-            </div>
-            <div class="box">
-                <h2>Apoya con tus ideas</h2>
-                <p><a href="mailto:acielito64@correo.com"><i class="fa-solid fa-envelope"></i>Click para escribir un correo</a></p> 
-            </div>
-        </div>
-        <div class="grupo-2">
-            <small>&copy; 2025 - <b><a href="https://aciel1234.github.io/MiPortafolio/" target="_blank" rel="noopener">aciel.dev</a></b>.</small>
-        </div>
-    </footer>
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <a href="#header">
+            <h1><i class="fa-regular fa-clone"></i>DWR</h1>
+          </a>
+        </figure>
+      </div>
 
-<script src="script.js"></script>
+      <div class="box">
+        <h2>Sobre el proyecto</h2>
+        <p>Iniciado en Noviembre de 2025.</p>
+        <p>Con visión de ser la librería #1 para desarrolladores web.</p>
+      </div>
+
+      <div class="box">
+        <h2>Sigue</h2>
+        <div class="red-social">
+          <a href="https://www.facebook.com/aciel.dev.2025" class="fa fa-facebook"
+             target="_blank" rel="noopener noreferrer"></a>
+          <a href="https://www.youtube.com/@acielolivera" class="fa fa-youtube"
+             target="_blank" rel="noopener noreferrer"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Apoya con tus ideas</h2>
+        <p>
+          <a href="mailto:acielito64@correo.com">
+            <i class="fa-solid fa-envelope"></i>Click para escribir un correo
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="grupo-2">
+      <small>&copy; 2025 - 
+        <b><a href="https://aciel1234.github.io/MiPortafolio/" target="_blank" rel="noopener noreferrer">aciel.dev</a>
+        </b>.
+      </small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
