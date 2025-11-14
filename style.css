@@ -1,9 +1,3 @@
-/* web-resources.css — versión 1.0.0 */
-code {
-  background: #e4e2e2;
-  border-radius: 8px;
-  padding: 5px;
-}
 /* -------------- Variables -------------- */
 :root{
   --wr-bg: #ffffff;
@@ -18,68 +12,219 @@ code {
   --wr-font: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Dark theme via prefers-color-scheme */
-@media (prefers-color-scheme: dark){
-  :root{
-    --wr-bg: #121214;
-    --wr-text: #e6e6e6;
-    --wr-accent: #66c6c8;
-    --wr-muted: #bdbdbd;
-    --wr-shadow: 0 6px 24px rgba(0,0,0,0.6);
-  }
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* -------------- Reset ligero -------------- */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:var(--wr-font);
-  color:var(--wr-text);
-  background:var(--wr-bg);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
-  font-size:16px;
+/* Body */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+/* Header */
+header, .logo, header ul {
+    display: flex;
+    justify-content: space-around;
+    
+}
+header {
+    backdrop-filter: blur(30px);
+    padding: 15px;
+    color: white;
+    border: 1.5px solid rbga(255, 255, 255, 0.18);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+}
+header ul {
+    gap: 30px;
+}
+header ul li {
+    list-style: none;
+}
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+.logo h3 {
+    color: orange;
+}
+
+/* Presentación */
+.presentacion {
+    padding: 4rem;
+}
+.presentacion h1, .presentacion h4 {
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+.presentacion h4 {
+    font-weight: lighter;
+    margin-top: 15px;
+}
+article {
+    background: #17233b;
+    margin-top: 4rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    font-family: monospace;
+    line-height: 20px;
+    padding: 30px;
+    border-radius: 8px;
+}
+article p {
+    color: #b2bdc7;
+    font-size: 14px;
+}
+code {
+    overflow-wrap: break-word;
+    font-size: 15px;
+    color: #f88d75;
+}
+.docs-link {
+    display: flex;
+    justify-content: right;
+}
+.docs-link a {
+    background: #5d5f61;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+.docs-link a i {
+    margin-right: 5px;
+}
+.notification {
+    display: flex;
+    gap: 5px;
+}
+.notification i {
+    color: #b2bdc7;
+}
+
+
+/* Hosted by */
+.hosted {
+    text-align: center;
+}
+h4 {
+    color: white;
+    font-weight: lighter;
+}
+h4 span {
+    color: orange;
+}
+.icons i {
+    font-size: 50px;
+    line-height: 100px;
+    color: #b2bdc7;
+}
+.icons i img {
+    width: 50px;
+    height: 50px;
+    transform: translateY(5px);
+}
+
+/* Ejemplo de uso */
+.des {
+    margin-top: 4rem;
+    margin-bottom: -50px;
+    font-weight: lighter;
+    color: snow;
+    line-height: 25px;
+}
+.des span {
+    color: orange;
+}
+.ejemplo-codigo {
+    height: auto;
+    margin-bottom: 2rem;
+}
+
 
 /* -------------- Container -------------- */
-.wr-container{
+.wr-container {
   width:100%;
   max-width:var(--wr-container-width);
-  padding:0 1rem;
-  margin:0 auto;
+  padding:4rem;
+  margin: 2rem auto;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border-radius: 8px;
 }
+.wr-container span {
+    color: orange;
+}
+.wr-container h1 {
+    color: snow;
+    text-align: center;
+}
+.wr-container h3 {
+    color: snow;
+    text-align: center;
+    font-weight: lighter;
+}
+.wr-container h3 span {
+    color: orange;
+    background: #17233b;
+    padding: 0 5px;
+    border-radius: 8px;
+    line-height: 40px;
+}
+.comp {
+    height: auto;
+    margin-top: 0;
+}
+/* Galeria de imagenes */
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 4rem;
+}
+.row img:nth-child(1) {
+    width: 100%;
+}
+.row img:nth-child(2) {
+    width: 100%;
+    height: 89%;
+}
+.row img:nth-child(3) {
+    width: 100%;
+    height: 90%;
+}
+
 
 /* -------------- Grid (responsive) -------------- */
 .wr-row{
   display:flex;
   flex-wrap:wrap;
   gap:var(--wr-gap);
+  margin-top: 4rem;
 }
-
 .wr-col{
   flex:1 1 0%;
   min-width:0;
 }
-
-/* Helpers para columnas (simples) */
-.wr-col-1{flex:0 0 8.333%}
-.wr-col-2{flex:0 0 16.666%}
-.wr-col-3{flex:0 0 25%}
-.wr-col-4{flex:0 0 33.333%}
-.wr-col-6{flex:0 0 50%}
-.wr-col-12{flex:0 0 100%}
-
-/* Media queries para adaptar */
-@media (max-width:900px){
-  .wr-col-3,.wr-col-4,.wr-col-2{flex:0 0 50%}
+/* -------------- Utilities -------------- */
+.mb-2{margin-bottom:1rem}
+/* -------------- Cards -------------- */
+.wr-card{
+  background:var(--wr-bg);
+  border-radius:var(--wr-radius);
+  padding:1rem;
+  border:1px solid rgba(0,0,0,0.04);
+  box-shadow:var(--wr-shadow);
+  text-align: center;
 }
-@media (max-width:520px){
-  .wr-row{gap:0.75rem}
-  .wr-col-1,.wr-col-2,.wr-col-3,.wr-col-4,.wr-col-6{flex:0 0 100%}
-}
-
 /* -------------- Buttons -------------- */
 .wr-btn{
   display:inline-flex;
@@ -103,60 +248,97 @@ body{
   border:1px solid rgba(0,0,0,0.06);
 }
 
-/* -------------- Cards -------------- */
-.wr-card{
-  background:var(--wr-bg);
-  border-radius:var(--wr-radius);
-  padding:1rem;
-  border:1px solid rgba(0,0,0,0.04);
-  box-shadow:var(--wr-shadow);
+/* Footer */
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
 }
-
-/* -------------- Typography -------------- */
-.wr-h1{font-size:2.25rem;margin:0 0 0.5rem}
-.wr-h2{font-size:1.5rem;margin:0 0 0.5rem}
-.wr-lead{font-size:1.0625rem;color:var(--wr-muted)}
-
-/* -------------- Utilities -------------- */
-.text-center{text-align:center}
-.mr-auto{margin-right:auto}
-.mb-1{margin-bottom:0.5rem}
-.mb-2{margin-bottom:1rem}
-.p-1{padding:0.5rem}
-.p-2{padding:1rem}
-
-/* -------------- Forms -------------- */
-.wr-input, .wr-textarea, .wr-select{
-  width:100%;
-  padding:0.6rem 0.75rem;
-  border-radius:6px;
-  border:1px solid rgba(0,0,0,0.08);
-  background:transparent;
-  color:var(--wr-text);
-  font-size:1rem;
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
 }
-.wr-textarea{min-height:120px;resize:vertical}
-
-/* -------------- Nav simple -------------- */
-.wr-nav{
-  display:flex;
-  gap:1rem;
-  align-items:center;
-  flex-wrap:wrap;
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.wr-nav a{
-  color:var(--wr-text);
-  text-decoration:none;
-  padding:0.35rem 0.5rem;
-  border-radius:6px;
+.pie-pagina .grupo-1 .box figure a{
+    text-decoration: none;
 }
-.wr-nav a:hover{ background:rgba(0,0,0,0.04) }
-
-/* -------------- Small responsive helpers -------------- */
-@media (max-width:600px){
-  .wr-h1{font-size:1.6rem}
-  .wr-h2{font-size:1.2rem}
+.pie-pagina .grupo-1 .box figure a h1{
+    color: orange;
 }
-
-/* End of web-resources.css */
-
+.pie-pagina .grupo-1 .box figure a h1 i{
+    color: #fff;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .box p a{
+    color: orange;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.pie-pagina .grupo-1 .box p a i {
+    margin-right: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+.pie-pagina .grupo-2 a {
+    text-decoration: none;
+    color: #fff;
+}
+.pie-pagina .grupo-2 a:hover {
+    color: #4aa3a6;
+}
+@media screen and (max-width: 900px) {
+   .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    } 
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
