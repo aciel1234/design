@@ -160,6 +160,7 @@ code {
 
 .icons a {
   margin: 0 10px;
+  text-decoration: none;
 }
 
 .icons i {

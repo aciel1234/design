@@ -1,9 +1,4 @@
 /* web-resources.css — versión 1.0.0 */
-code {
-  background: #e4e2e2;
-  border-radius: 8px;
-  padding: 5px;
-}
 /* -------------- Variables -------------- */
 :root{
   --wr-bg: #ffffff;
@@ -30,8 +25,14 @@ code {
 }
 
 /* -------------- Reset ligero -------------- */
-*{box-sizing:border-box}
-html,body{height:100%}
+*{
+  box-sizing:border-box
+}
+
+html,body{
+  height:100%
+}
+
 body{
   margin:0;
   font-family:var(--wr-font);
@@ -159,4 +160,3 @@ body{
 }
 
 /* End of web-resources.css */
-
