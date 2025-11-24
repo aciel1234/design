@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Poderosa librería para frontend devs. Crea componentes predefinidos y estilos CSS avanzados.">
+  <meta name="author" content="Aciel Olivera García">
+
+  <title>Documentación - Design Web Resources</title>
+
+  <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="docs.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav id="sidebar">
+    <div class="buttons">
+        <button id="toggle-btn" onclick="toggleSidebar()">&lt;&lt;</button>
+        <a href="https://aciel1234.github.io/design/index.html" class="inicio">Inicio</a>
+    </div>
+
+    <ul class="nav-list">
+        <!-- Títulos de sección -->
+        <li class="section-title"><i class="fa fa-book-open"></i><span>Documentación</span></li>
+        <li class="active"><a href="index.html"><i class="fa fa-book"></i><span>Introducción</span></a></li>
+
+        <li class="section-title"><i class="fa fa-paintbrush"></i><span>Personaliza</span></li>
+        <li><a href="colores.html"><i class="fa fa-book"></i><span>Colores</span></a></li>
+        <li><a href="cssvariables.html"><i class="fa fa-book"></i><span>CSS Variables</span></a></li>
+
+        <li class="section-title"><i class="fa fa-folder-tree"></i><span>Layout</span></li>
+        <li><a href="mediaqueries.html"><i class="fa fa-book"></i><span>Media Queries</span></a></li>
+        <li><a href="contenedores.html"><i class="fa fa-book"></i><span>Contenedores</span></a></li>
+        <li><a href="grid.html"><i class="fa fa-book"></i><span>Grid</span></a></li>
+        <li><a href="flex.html"><i class="fa fa-book"></i><span>Flex</span></a></li>
+
+        <li class="section-title"><i class="fa fa-list"></i><span>Formularios</span></li>
+        <li><a href="formularios.html"><i class="fa fa-book"></i><span>Formularios</span></a></li>
+        <li><a href="select.html"><i class="fa fa-book"></i><span>Select</span></a></li>
+        <li><a href="check-radio.html"><i class="fa fa-book"></i><span>Check & Radio</span></a></li>
+        <li><a href="input.html"><i class="fa fa-book"></i><span>Input</span></a></li>
+        <li><a href="form-layout.html"><i class="fa fa-book"></i><span>Layout</span></a></li>
+        <li><a href="validacion.html"><i class="fa fa-book"></i><span>Validación</span></a></li>
+
+        <li class="section-title"><i class="fa-regular fa-rectangle-list"></i><span>Componentes</span></li>
+        <li><a href="botones.html"><i class="fa fa-book"></i><span>Botones</span></a></li>
+        <li><a href="card.html"><i class="fa fa-book"></i><span>Card</span></a></li>
+        <li><a href="dropdown.html"><i class="fa fa-book"></i><span>Dropdown</span></a></li>
+        <li><a href="lista.html"><i class="fa fa-book"></i><span>Lista</span></a></li>
+        <li><a href="navbar.html"><i class="fa fa-book"></i><span>Navbar</span></a></li>
+        <li><a href="navbar-tabs.html"><i class="fa fa-book"></i><span>Navbar & Tabs</span></a></li>
+        <li><a href="paginacion.html"><i class="fa fa-book"></i><span>Paginación</span></a></li>
+
+        <li class="section-title"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Utilidades</span></li>
+        <li><a href="background.html"><i class="fa fa-book"></i><span>Background</span></a></li>
+        <li><a href="borders.html"><i class="fa fa-book"></i><span>Borders</span></a></li>
+        <li><a href="display.html"><i class="fa fa-book"></i><span>Display</span></a></li>
+        <li><a href="link.html"><i class="fa fa-book"></i><span>Link</span></a></li>
+        <li><a href="object-fit.html"><i class="fa fa-book"></i><span>Object fit</span></a></li>
+        <li><a href="opacity.html"><i class="fa fa-book"></i><span>Opacity</span></a></li>
+        <li><a href="overflow.html"><i class="fa fa-book"></i><span>Overflow</span></a></li>
+        <li><a href="position.html"><i class="fa fa-book"></i><span>Position</span></a></li>
+        <li><a href="shadow.html"><i class="fa fa-book"></i><span>Sombras</span></a></li>
+        <li><a href="size.html"><i class="fa fa-book"></i><span>Size</span></a></li>
+        <li><a href="text.html"><i class="fa fa-book"></i><span>Texto</span></a></li>
+        <li><a href="alineacion.html"><i class="fa fa-book"></i><span>Alineación</span></a></li>
+        <li><a href="visibilidad.html"><i class="fa fa-book"></i><span>Visibilidad</span></a></li>
+
+        <li class="section-title"><i class="fa-solid fa-paperclip"></i><span>Extensiones</span></li>
+        <li><a href="iconos.html"><i class="fa fa-book"></i><span>Iconos</span></a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <div class="container" id="inicio-dwr">
+        <h2>Iniciemos con DWR</h2>
+        <p>DWR es una herramienta que te permite importar estructuras y estilos personalizados a tus proyectos, dando la posibilidad de modificarlos cada vez que gustes.</p>
+        <h3>Importación</h3>
+        <p>Comencemos añadiendo WDR al proyecto</p>
+        <p><b>1.</b> Crea un nuevo <span>index.html</span>. Incluye la etiqueta <code>&lt;meta name="viewport"&gt;</code> para tener un <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport">comportamiento responsivo</a> en dispositivos móviles.</p>
+    </div>
+
+            <pre>
+                <code>
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html lang="es"&gt;<br>
+                    &lt;head&gt;<br>
+                        &lt;meta charset="utf-8"&gt;<br>
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+                        &lt;title>DWR demo&lt;/title&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                        &lt;h1&gt;Hello, world!&lt;/h1&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+                </code>
+            </pre>
+
+<div class="container">
+    <p><b>2.</b> Incluye DWR. Pon la etiqueta <code>&lt;link&gt;</code> en el <code>&lt;head&gt;</code> para tener importar todos los estilos CSS.</p>
+</div>
+
+<pre>
+    <code>
+            &lt;!DOCTYPE html&gt;<br>
+            &lt;html lang="es"&gt;<br>
+            &lt;head&gt;<br>
+                &lt;meta charset="utf-8"&gt;<br>
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+                &lt;title>DWR demo&lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            &lt;link rel="stylesheet" href="https://aciel1234.github.io/design@latest/css/web-resources.css"&gt;
+                &lt;h1&gt;Hello, world!&lt;/h1&gt;<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;<br>
+    </code>
+</pre>
+
+   <div class="container">
+     <p><b>3.</b> Abre la página en el navegador para a ver los resultados. Ahora podrás comenzar a usar y modificar los estilos en base a tus preferencias.</p>
+   </div>
+
+   <div class="container">
+        <h3>Links</h3>
+        <p>Podrás usar este link para copiar y pegar todas las estructuras de html disponibles. De esa forma se aplicarán los estilos correspondientes a cada una.</p>
+        <p>También se añadió el atributo <code>crossorigin="anonymous"</code> para prevenir errores <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS">CORS</a>.</p>
+    </div>
+
+    <div class="container">
+        <h3>Siguientes pasos</h3>
+        <p><b>·</b> Lee un poco más acerca de algunas <a href="#global-variables">configuraciones globales del entorno</a> que DWR utiliza.</p>
+        <p><b>·</b> Lee acerca de qué incluye WDR in nuestra <a href="#seccion-contenido">sección de contenido</a>.</p>
+    </div>
+
+    <div class="container" id="global-variables">
+        <h3>Variables importantes</h3>
+        <p>DWR utiliza variables globales importantes con el fin de normalizar el comportamiento generalizado de la web.</p>
+    </div>
+
+    <div class="container">
+        <h3>HTML5 doctype</h3>
+        <p>DWR requiere el uso de HTML5 doctype. Sin este, podrán ocurrir errores de estilo inesperados.</p>
+
+        <pre>
+            <code>
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html lang="es"&gt;<br>
+                ... <br>
+                &lt;/html&gt;<br>
+            </code>
+        </pre>
+
+    </div>
+
+    <div class="container">
+        <h3>Viewport meta</h3>
+        <p>DWR tambíen está visto para el desarrollo web en dispositivos móviles, por lo que se hace necesario esta etiqueta en el <code>head</code> para que la página se más escalable en combinación con los componentes necesarios usando CSS media queries.</p>
+
+        <pre>
+            <code>
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+            </code>
+        </pre>
+
+        <p>Puedes ver un ejemplo de esta acción en <a href="#inicio-dwr">Iniciemos con DWR</a>.</p>
+
+    </div>
+
+    <div class="container">
+        <h3>Box-sizing</h3>
+        <p>Para que el comportamiento de la página web sea más generalizado, en CSS se emplea <code>box-sizing</code> con un valor de <code>border-box</code>. Esto asegura que el padding no afecte el width de ningún elemento.</p>
+        <p>Si en alguna ocasión necesitas implementar otro valor, usa algo como:</p>
+
+        <pre>
+            <code>
+.selector-para-algun-componente {
+  box-sizing: content-box;
+}
+            </code>
+        </pre>
+
+        <p>Con el ejemplo de arriba, todos los componenes hijos de la etiqueta que lleve esa clase -incluyendo los generados via <code>::before</code> y <code>::after</code>- tomarán el valor del <code>box-sizing</code> especificado.</p>
+
+        <p>Lee más acerca del <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model">box model en MDN</a>.</p>
+
+    </div>
+
+    <div class="container" id="seccion-contenido">
+        <h2>Contenido</h2>
+        <p>La librería de DWR está compuesta por:</p>
+        
+        <pre>
+            <code>
+                design/ <br>
+                &nbsp; |-- css/ <br>
+                &nbsp; | &nbsp; |__ web-resources.css <br>
+                &nbsp; |-- img/ <br>
+                &nbsp; | &nbsp;
+                &nbsp; | <br>
+                &nbsp; |__ index.html <br>
+                &nbsp; |__ style.css <br>
+                &nbsp; |__ about.html <br>
+                &nbsp; |__ about-style.css <br>
+                &nbsp; |__ REDAME.md <br>
+                &nbsp; |__ script.html <br>
+            </code>
+        </pre>
+
+        <p>El archivo <code>index.html</code> es la página de presentación de DWR junto con <code>about.html</code>,  mientras que dentro de la carpeta <code>css</code> tenemos el archivo <code>web-resources.css</code>, la librería de DWR, que contiene todos los estilos CSS disponibles. Entre otros archivos.</p>
+
+    </div>
+
+    <div class="container" id="inicio-dwr">
+        <h2>Comunidad</h2>
+        <p>Para apoyar este proyecto con ideas puedes enviar un correo <a href="mailto:acielito64@correo.com">dando clic en este enlace</a>.</p>
+    </div>
+
+
+</main>
+    
+<script src="togglebtn.js"></script>
+</body>
+</html>

@@ -1,162 +1,111 @@
 /* web-resources.css — versión 1.0.0 */
 /* -------------- Variables -------------- */
 :root{
-  --wr-bg: #ffffff;
-  --wr-text: #222;
-  --wr-accent: #4aa3a6;
-  --wr-muted: #6b6b6b;
-  --wr-radius: 8px;
-  --wr-gap: 1rem;
-  --wr-container-width: 1100px;
-  --wr-shadow: 0 6px 18px rgba(17,17,17,0.06);
-  --wr-transition: 0.18s ease;
-  --wr-font: "Inter", "Helvetica Neue", Arial, sans-serif;
+  /* ----- Global Fonts ----- */
+  --global-font1: sans-serif;
+  --global-font2: 'Arial Narrow';
+  --global-font3: 'Courier New', Courier, monospace;
+  --global-font4: 'Times New Roman', Times, serif;
+  --global-font5: cursive;
+
+  /* ----- Global Colors ----- */
+  /* Black */
+  --global-black1: #0f090b;
+  --global-black2: #1c1c1c;
+  --global-black3: #0f0f0f;
+
+  /* Brown */
+  --global-brown1: #362828;
+  --global-brown2: #63514f;
+  --global-brown3: #8b7069;
+  --global-brown4: #af9284;
+  --global-brown5: #6e4829;
+  --global-brown6: #8f6f56;
+  --global-brown7: #c5c0a9;
+  --global-brown8: #aa895f;
+  --global-brown9: #e0d8cc;
+  --global-brown10: #f7f2ef;
+  --global-brown11: #e1ddd2;
+  --global-brown12: #bfbbaf;
+
+  /* Violet */
+  --global-violet1: #391b49;
+  --global-violet2: #4c1a57;
+  --global-violet3: #1e202c;
+  --global-violet4: #60519b;
+  --global-violet5: #080121;
+  --global-violet6: #120239;
+  --global-violet7: #260656;
+  --global-violet8: #4a1985;
+
+  /* Pink */
+  --global-pink1: #795690;
+  --global-pink2: #9670c7;
+  --global-pink3: #c29ce5;
+  --global-pink4: #ce9bce;
+  --global-pink5: #9d81b3;
+  --global-pink6: #746085;
+  --global-pink7: #483a52;
+  --global-pink8: #302031;
+  --global-pink9: #bab0d4;
+  --global-pink10: #a540ca;
+  --global-pink11: #c0aeb1;
+  
+  /* Green */
+  --global-green1: #203031;
+  --global-green2: #3a5152;
+  --global-green3: #608385;
+  --global-green4: #81b1b3;
+  --global-green5: #4d6530;
+  --global-green6: #555a54;
+
+  /* Celest */
+  --global-celest1: #00a8aa;
+
+  /* Yellow */
+  --global-yellow1: #f0f600;
+
+  /* Blue */
+  --global-blue1: #364649;
+  --global-blue2: #708f96;
+  --global-blue3: #31323e;
+  --global-blue4: #bfc0d1;
+  --global-blue5: #98bfd0;
+  --global-blue6: #78acc1;
+  --global-blue7: #61678b;
+  --global-blue8: #8488b5;
+  --global-blue9: #bcb9d8;
+  --global-blue10: #dedeea;
+  --global-blue11: #99bec6;
+
+  /* White */
+  --global-white1: #f4f4f4;
+  --global-white2: #ebe9e8;
+
+  /* Grey */
+  --global-grey1: #dcdcdc;
+  --global-grey2: #bfbfbf;
+  --global-grey3: #9b9b9b;
+  --global-grey4: #7a7a7a;
+  --global-grey5: #5a5a5a;
+  --global-grey6: #3c3c3c;
+  --global-grey7: #757a7b;
+
+  /* ----- Global Radius ----- */
+  /* Radius */
+  --global-radius: 8px;
+
+  /* ----- Global Gap ----- */
+  /* Gap */
+  --global-gap: 1rem;
+
+  /* ----- Global Shadow ----- */
+  /* Shadow */
+  --global-shadow: 0 6px 18px rgba(17,17,17,0.06);
+
+  /* ----- Global Transition ----- */
+  /* Transition */
+  --global-transition: 0.3s ease;
+
 }
 
-/* Dark theme via prefers-color-scheme */
-@media (prefers-color-scheme: dark){
-  :root{
-    --wr-bg: #121214;
-    --wr-text: #e6e6e6;
-    --wr-accent: #66c6c8;
-    --wr-muted: #bdbdbd;
-    --wr-shadow: 0 6px 24px rgba(0,0,0,0.6);
-  }
-}
-
-/* -------------- Reset ligero -------------- */
-*{
-  box-sizing:border-box
-}
-
-html,body{
-  height:100%
-}
-
-body{
-  margin:0;
-  font-family:var(--wr-font);
-  color:var(--wr-text);
-  background:var(--wr-bg);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
-  font-size:16px;
-}
-
-/* -------------- Container -------------- */
-.wr-container{
-  width:100%;
-  max-width:var(--wr-container-width);
-  padding:0 1rem;
-  margin:0 auto;
-}
-
-/* -------------- Grid (responsive) -------------- */
-.wr-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:var(--wr-gap);
-}
-
-.wr-col{
-  flex:1 1 0%;
-  min-width:0;
-}
-
-/* Helpers para columnas (simples) */
-.wr-col-1{flex:0 0 8.333%}
-.wr-col-2{flex:0 0 16.666%}
-.wr-col-3{flex:0 0 25%}
-.wr-col-4{flex:0 0 33.333%}
-.wr-col-6{flex:0 0 50%}
-.wr-col-12{flex:0 0 100%}
-
-/* Media queries para adaptar */
-@media (max-width:900px){
-  .wr-col-3,.wr-col-4,.wr-col-2{flex:0 0 50%}
-}
-@media (max-width:520px){
-  .wr-row{gap:0.75rem}
-  .wr-col-1,.wr-col-2,.wr-col-3,.wr-col-4,.wr-col-6{flex:0 0 100%}
-}
-
-/* -------------- Buttons -------------- */
-.wr-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:0.5rem;
-  padding:0.5rem 1rem;
-  background:var(--wr-accent);
-  color: #fff;
-  border:none;
-  border-radius:var(--wr-radius);
-  cursor:pointer;
-  text-decoration:none;
-  font-weight:600;
-  transition: transform var(--wr-transition), box-shadow var(--wr-transition);
-  box-shadow: var(--wr-shadow);
-}
-.wr-btn:hover{ transform:translateY(-3px) }
-.wr-btn.secondary{
-  background:transparent;
-  color:var(--wr-text);
-  border:1px solid rgba(0,0,0,0.06);
-}
-
-/* -------------- Cards -------------- */
-.wr-card{
-  background:var(--wr-bg);
-  border-radius:var(--wr-radius);
-  padding:1rem;
-  border:1px solid rgba(0,0,0,0.04);
-  box-shadow:var(--wr-shadow);
-}
-
-/* -------------- Typography -------------- */
-.wr-h1{font-size:2.25rem;margin:0 0 0.5rem}
-.wr-h2{font-size:1.5rem;margin:0 0 0.5rem}
-.wr-lead{font-size:1.0625rem;color:var(--wr-muted)}
-
-/* -------------- Utilities -------------- */
-.text-center{text-align:center}
-.mr-auto{margin-right:auto}
-.mb-1{margin-bottom:0.5rem}
-.mb-2{margin-bottom:1rem}
-.p-1{padding:0.5rem}
-.p-2{padding:1rem}
-
-/* -------------- Forms -------------- */
-.wr-input, .wr-textarea, .wr-select{
-  width:100%;
-  padding:0.6rem 0.75rem;
-  border-radius:6px;
-  border:1px solid rgba(0,0,0,0.08);
-  background:transparent;
-  color:var(--wr-text);
-  font-size:1rem;
-}
-.wr-textarea{min-height:120px;resize:vertical}
-
-/* -------------- Nav simple -------------- */
-.wr-nav{
-  display:flex;
-  gap:1rem;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.wr-nav a{
-  color:var(--wr-text);
-  text-decoration:none;
-  padding:0.35rem 0.5rem;
-  border-radius:6px;
-}
-.wr-nav a:hover{ background:rgba(0,0,0,0.04) }
-
-/* -------------- Small responsive helpers -------------- */
-@media (max-width:600px){
-  .wr-h1{font-size:1.6rem}
-  .wr-h2{font-size:1.2rem}
-}
-
-/* End of web-resources.css */
