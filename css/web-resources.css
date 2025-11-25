@@ -77,6 +77,7 @@
   --global-blue9: #bcb9d8;
   --global-blue10: #dedeea;
   --global-blue11: #99bec6;
+  --global-blue12: #008cff;
 
   /* White */
   --global-white1: #f4f4f4;
@@ -106,6 +107,131 @@
   /* ----- Global Transition ----- */
   /* Transition */
   --global-transition: 0.3s ease;
-
 }
+
+
+  /* ----- Predefined Styles ----- */
+  .docs-containers h2 {
+    margin-bottom: 10px;
+  }
+  /* Search Bar */
+  .search-container {
+    z-index: -99999;  
+  }
+  .search-container input {
+    padding: 10px;
+    padding-right: 35px;
+    border-radius: 5px 5px 5px 5px;
+    border: 0;
+    outline: none;
+    font-size: 1rem;
+  }
+  .search-container i {
+    transform: translateX(-30px);
+    color: var(--global-blue6);
+  }
+
+/* Button with light */
+.boton-con-luz button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--global-white1);
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid var(--global-grey3);
+  transition: var(--global-transition);
+  user-select: none;
+}
+.boton-con-luz button:hover, .boton-con-luz button:focus {
+  color: var(--global-white2);
+  background: var(--global-blue12);
+  border: 1px solid var(--global-blue12);
+  text-shadow: 0 0 5px var(--global-white1), 0 0 10px var(--global-white1), 0 0 20px var(--global-white1);
+  box-shadow: 0 0 5px var(--global-blue12), 0 0 20px var(--global-blue12), 0 0 50px var(--global-blue12), 0 0 100px var(--global-blue12);
+}
+
+/* Boton gradiente animado */
+.boton-gradiente-animado button {
+  background: var(--global-black1);
+  cursor: pointer;
+  border: none;
+  padding: 16px 32px;
+  color: var(--global-white1);
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  border-radius: 12px;
+}
+.boton-gradiente-animado button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    var(--global-violet6), var(--global-pink3), var(--global-violet4), var(--global-pink3),
+    var(--global-violet6), var(--global-pink3), var(--global-violet4), var(--global-pink3)
+  );
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Hover Effects */
+.hover-effects .wrapper {
+  display: flex;
+  gap: 15px;
+}
+.hover-effects .wrapper .card {
+  width: 150px;
+  height: 100px;
+  border-radius: 7px;
+  background: var(--global-pink3);
+  cursor: pointer;
+ transition: var(--global-transition);
+}
+.hover-effects .wrapper:hover>:not(:hover) {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+/* Spinner */
+.spinner-container .spinner {
+  border: 4px solid rgba(204, 203, 203, 0.397);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s ease infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 

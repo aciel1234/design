@@ -85,6 +85,9 @@ header nav ul li a:hover {
 /* --------- Main --------- */
 main {
     padding: min(30px, 7%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 1rem;
 }
 
 main p {
