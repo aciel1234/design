@@ -248,3 +248,11 @@
   mask-image: linear-gradient(var(--global-black1), transparent);
   -webkit-mask-image: linear-gradient(var(--global-black1), transparent);
 }
+
+
+/* Glass efect */
+.glass-effect-container .glass-effect {
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+}
