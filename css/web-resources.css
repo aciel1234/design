@@ -235,3 +235,16 @@
 
 
 
+/* Mask radial image */
+.mask-radial-container .img-container img {
+  width: 100%;
+  mask-image: radial-gradient(circle, var(--global-black1), transparent);
+  -webkit-mask-image: radial-gradient(circle, var(--global-black1), transparent);
+}
+
+/* Mask linear image */
+.mask-linear-container .img-container img {
+  width: 100%;
+  mask-image: linear-gradient(var(--global-black1), transparent);
+  -webkit-mask-image: linear-gradient(var(--global-black1), transparent);
+}
