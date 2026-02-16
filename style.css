@@ -272,6 +272,23 @@ code {
   text-align: center;
 }
 
+/* -------------- Consejos -------------- */
+.consejos {
+  transition: .3s ease-in-out;
+}
+.consejos:hover {
+  transform: scale(0.9);
+}
+.js, .html {
+  border-radius: 8px;
+}
+.js {
+  background-color: yellow;
+}
+.html {
+  background-color: orangered;
+}
+
 /* -------------- Buttons -------------- */
 .wr-btn {
   display: inline-flex;
