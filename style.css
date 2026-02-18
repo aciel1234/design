@@ -275,6 +275,8 @@ code {
 /* -------------- Consejos -------------- */
 .consejos {
   transition: .3s ease-in-out;
+  max-width: 100px;
+  justify-self: center;
 }
 .consejos:hover {
   transform: scale(0.9);
