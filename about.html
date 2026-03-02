@@ -10,13 +10,16 @@
   <title>About - Design Web Resources</title>
 
   <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="about-style.css">
+  <link rel="stylesheet" href="styles/about.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
 </head>
 
+<!-- PROGRESS BAR -->
+ <div class="progress-bar" id="progress-bar"></div>
+
 <body>
-  <header id="header">
+  <header id="header" class="opacity">
     <div class="logo">
       <a href="index.html" aria-label="Inicio">
         <i class="fa-regular fa-clone"></i>
@@ -26,6 +29,7 @@
 
     <nav>
       <ul>
+        <li><a href="about.html">Acerca de</a></li>
         <li><a href="docs/docs.html">Documentación</a></li>
         <li>
           <a href="https://www.facebook.com/aciel.dev2026" 
@@ -39,36 +43,80 @@
 
   <main class="main-content">
     <section class="presentacion">
-      <p>
-        Acerca de <span>D</span>ev <span>W</span>eb <span>R</span>esources<br>
+      <p class="bottom-hidden">
+        Acerca de <span>D</span>esign <span>W</span>eb <span>R</span>esources<br>
         Librería de estilos <span>CSS</span>
       </p>
     </section>
 
     <section class="descripcion">
-      <p>
-        DWR (Dev Web Resources) es una librería gratuita de estilos CSS que permite a los desarrolladores web crear interfaces más atractivas y personalizables.
+      <p class="bottom-hidden">
+        DWR (Design Web Resources) es una librería gratuita de estilos CSS que permite a los desarrolladores web crear interfaces más atractivas y personalizables.
         <br><br>
         Creada en noviembre de 2025, continúa en desarrollo con la visión de convertirse en la librería #1 para el diseño frontend.
       </p>
 
-      <h3>Ventajas</h3>
+      <h3 class="bottom-hidden">Ventajas</h3>
 
       <div class="card-container">
-        <div class="card"><p><i class="fa-solid fa-truck-fast"></i>Rapidez</p></div>
-        <div class="card"><p><i class="fa-solid fa-chart-simple"></i>Rendimiento</p></div>
-        <div class="card"><p><i class="fa-solid fa-globe"></i>Estabilidad</p></div>
+        <div class="card bottom-hidden"><p><i class="fa-solid fa-truck-fast"></i>Rapidez</p></div>
+        <div class="card bottom-hidden"><p><i class="fa-solid fa-chart-simple"></i>Rendimiento</p></div>
+        <div class="card bottom-hidden"><p><i class="fa-solid fa-globe"></i>Estabilidad</p></div>
       </div>
     </section>
 
     <section class="produccion">
-      <h2>Listo para producción</h2>
-      <p>
-        WDR está diseñado para ser usado en producción incluso en grandes plataformas. Se trabaja constantemente para mejorar su rendimiento y recursos.
+      <h2 class="bottom-hidden">Listo para producción</h2>
+      <p class="bottom-hidden">
+        DWR está diseñado para ser usado en producción incluso en grandes plataformas. Se trabaja constantemente para mejorar su rendimiento y recursos.
         <br><br>
         Si un estilo está disponible en la librería, se garantiza su compatibilidad y estabilidad a largo plazo.
       </p>
     </section>
+
+    <section class="timeline">
+  <h2 class="bottom-hidden">Timeline del Proyecto</h2>
+
+  <div class="timeline-container">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content left-hidden">
+        <h3>Fase 1 - Idea</h3>
+        <p>Nace DWR con la idea de simplificar el desarrollo web usando variables CSS globales.</p>
+        <span class="date">Noviembre 2025</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content right-hidden">
+        <h3>Fase 2 - Desarrollo</h3>
+        <p>Se crean las primeras variables, utilidades y estructura base del framework.</p>
+        <span class="date">Noviembre 2025</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content left-hidden">
+        <h3>Fase 3 - Componentes</h3>
+        <p>Se agregan componentes reutilizables y mejoras visuales.</p>
+        <span class="date">Febrero 2026</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content right-hidden">
+        <h3>Fase 4 - Documentación</h3>
+        <p>Se publica la documentación y ejemplos prácticos. Cambio visual de la página.</p>
+        <span class="date">Marzo 2026</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <section class="apoyo">
       <h2>¿Cómo apoyar?</h2>
@@ -83,6 +131,8 @@
         <a href="mailto:acielito64@correo.com"><i class="fa-solid fa-envelope"></i>Gmail</a>.
       </p>
     </section>
+
+    
 
     <section class="team">
       <h2>Responsable</h2>
@@ -140,5 +190,7 @@
       </small>
     </div>
   </footer>
+
+  <script src="script/scroll.js"></script>
 </body>
 </html>

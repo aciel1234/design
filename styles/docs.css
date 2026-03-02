@@ -1,0 +1,243 @@
+/* =========================================
+                RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #0a0f1c;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* =========================================
+                HEADER
+========================================= */
+
+header {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 13px;
+  backdrop-filter: blur(50px);
+  transition: 0.3s ease;
+}
+
+header.scrolled {
+  background: rgba(10, 15, 28, 0.85);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #00ffa3;
+  font-weight: bold;
+}
+
+.logo a h3 {
+  color: #00ffa3;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #d1d5db;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00ffa3;
+}
+
+/* =========================================
+                MAIN
+========================================= */
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 160px 20px 100px 20px;
+  position: relative;
+}
+
+/* Glow superior */
+main::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0,255,163,0.12), transparent 70%);
+  top: -200px;
+  left: -200px;
+  filter: blur(120px);
+  z-index: -1;
+}
+
+/* =========================================
+                CONTAINERS
+========================================= */
+
+.container {
+  margin-bottom: 4rem;
+  padding: 3rem;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #111827, #0f172a);
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition: 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-6px);
+  border: 1px solid rgba(0,255,163,0.4);
+  box-shadow:
+    0 30px 60px rgba(0,0,0,0.8),
+    0 0 40px rgba(0,255,163,0.1);
+}
+
+/* =========================================
+                TIPOGRAFÍA
+========================================= */
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00ffa3;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 2rem 0 1rem 0;
+  color: white;
+}
+
+p {
+  color: #b2bdc7;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+span,
+.container code,
+.container a {
+  color: #00ffa3;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+                BLOQUES DE CÓDIGO
+========================================= */
+
+pre {
+  margin: 2rem 0 4rem 0;
+  padding: 2rem;
+  border-radius: 16px;
+  background: #0f172a;
+  border: 1px solid rgba(0,255,163,0.1);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  overflow-x: auto;
+  transition: 0.3s ease;
+}
+
+pre:hover {
+  border: 1px solid rgba(0,255,163,0.4);
+  box-shadow: 0 20px 60px rgba(0,255,163,0.15);
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+/* Código inline */
+p code {
+  background: rgba(0,255,163,0.1);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* =========================================
+                FOOTER
+========================================= */
+
+.pie-pagina {
+  background: #0a0f1c;
+  padding: 4rem 2rem;
+  color: #9aa8b5;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.grupo-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.grupo-1 h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.pie-pagina a {
+  color: #00ffa3;
+  text-decoration: none;
+}
+
+.grupo-2 {
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+}
+
+/* =========================================
+                RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  main {
+    padding: 140px 20px 80px 20px;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  .grupo-1 {
+    flex-direction: column;
+  }
+
+}

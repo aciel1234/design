@@ -6,17 +6,20 @@
   <meta name="description" content="Poderosa librería para frontend devs. Crea componentes predefinidos y estilos CSS avanzados.">
   <meta name="author" content="Aciel Olivera García">
 
-  <title>Design Web Resources - Rápido y confiable servidor de recursos web</title>
+  <title>Design Web Resources - Puros Estilos CSS Sin JavaScript</title>
 
   <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
 </head>
 
+<!-- PROGRESS BAR -->
+ <div class="progress-bar" id="progress-bar"></div>
+
 <body>
 
-  <header id="header">
+  <header id="header" class="opacity">
     <div class="logo">
       <a href="index.html">
         <i class="fa-regular fa-clone"></i>
@@ -37,62 +40,67 @@
     </nav>
   </header>
 
-  <main>
-    <section class="presentacion">
-      <h1>Librería de estilos para tus páginas web</h1>
-      <h4>Automatizado. Servicio estable y seguro.</h4>
+  <div class="background">
+    <div class="glow-circle c1"></div>
+    <div class="glow-circle c2"></div>
+    <div class="glow-circle c3"></div>
 
-      <article>
-        <p>// cargar los estilos, click para copiar al portapapeles</p>
-        <code id="copiar-codigo">
-          &lt;link rel="stylesheet" href="https://aciel1234.github.io/design@latest/css/web-resources.css"&gt;
-        </code>
-        <p>// en caso de que no functione probar esta</p>
-        <code id="copiar-codigo2">
-          &lt;link rel="stylesheet" href="https://aciel1234.github.io/design/css/web-resources.css"&gt;
-        </code>
+    <div class="card bottom-hidden">
+      <h1>Design Web <span>Resources</span></h1>
+      <p>Puros estilos CSS sin JavaScript</p>
+    </div>
+  </div>
 
-        <div class="docs-link">
-          <a href="docs/docs.html" rel="noopener noreferrer">
-            <i class="fa-solid fa-book"></i>Full docs
-          </a>
-        </div>
 
-        <div class="notification" id="feedbackElement"></div>
-      </article>
-    </section>
+<section class="start">
+  <div class="queEs">
+    <h1 class="left-hidden">Añade los estilos a tu web</h1>
+    <p class="left-hidden">DWR es la nueva opción para tus proyectos web. Solo con estilos CSS podrás crear páginas web grandes y poderosas.</p>
 
-    <section class="hosted">
-      <h4><span>D</span>esign <span>W</span>eb <span>R</span>esources funciona gracias a:</h4>
+    <p class="left-hidden">carga rápida</p>
+    <p class="left-hidden">fácil de integrar</p>
+    <p class="left-hidden">estilos predefinidos</p>
+  </div>
 
-      <div class="icons">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-        </a>
+  <div class="integrar right-hidden">
+    <p>// cargar los estilos, click para copiar al portapapeles</p>
+    <code id="copiar-codigo">
+      &lt;link rel="stylesheet" href="https://aciel1234.github.io/design@latest/css/web-resources.css"&gt;
+    </code>
+    <p>// en caso de que no functione probar esta</p>
+    <code id="copiar-codigo2">
+      &lt;link rel="stylesheet" href="https://aciel1234.github.io/design/css/web-resources.css"&gt;
+    </code>
+  </div>
+</section>
 
-        <a href="https://jsdelivr.com" target="_blank" rel="noopener noreferrer">
-          <img src="img/jsdelivr.png" alt="Logo jsDelivr">
-        </a>
+<section class="hosted">
+    <h4 class="bottom-hidden"><span>D</span>esign <span>W</span>eb <span>R</span>esources funciona gracias a:</h4>
+    <div class="icons">
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="bottom-hidden">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://jsdelivr.com" target="_blank" rel="noopener noreferrer" class="bottom-hidden">
+        <img src="img/jsdelivr.png" alt="Logo jsDelivr">
+      </a>
+      <a href="https://highlightjs.org/">
+        <img src="img/highlightjs.png" alt="Logo Highlight.js" class="bottom-hidden">
+      </a>
+    </div>
+</section>
 
-        <a href="https://highlightjs.org/">
-          <img src="img/highlightjs.png" alt="Logo Highlight.js">
-        </a>
-      </div>
-    </section>
-
-    <!-- Ejemplo de uso -->
-    <section class="wr-container">
-      <h1>Construye tu web con <span>variables CSS</span> en tiempo real</h1>
-      <h3>
+<section class="wr-container">
+      <h1 class="left-hidden">Construye tu web con <span>variables CSS</span> en tiempo real</h1>
+      <h3 class="des right-hidden">
         <span>DWR</span> proporciona colores, tipografías y más para usarlas donde quieras.
       </h3>
 
-      <p class="des">
+      <p class="des left-hidden">
         Usa cualquiera de las <span>variables globales</span> con la sintaxis 
         <code>var(--global-variableName)</code>.
       </p>
 
-      <article class="ejemplo-codigo">
+      <div class="ejemplo-codigo right-hidden">
         <code>
           :root {<br>
             --global-brown1: #362828;<br>
@@ -103,68 +111,40 @@
             --global-font4: 'Times New Roman', Times, serif;<br>
           }
         </code>
-      </article>
-    </section>
-
-    <!-- Componentes
-    <section class="wr-container block">
-      <h1>Estiliza los componentes</h1>
-
-      <p class="des">
-        Usa <span>clases predefinidas</span> para modificar la vista de los componentes.
-      </p>
-
-      <div class="wr-row mb-2">
-        <div class="wr-col wr-card">
-          <a class="wr-btn" href="#">Primary</a>
-          <a class="wr-btn secondary" href="#">Secondary</a>
-        </div>
       </div>
+</section>
 
-      <article class="ejemplo-codigo comp">
-        <code>
-&lt;section class="wr-row mb-2 block"&gt;<br>
-  &lt;div class="wr-col wr-card"&gt;<br>
-    &lt;a class="wr-btn" href="#"&gt;Primary&lt;/a&gt;<br>
-    &lt;a class="wr-btn secondary" href="#"&gt;Secondary&lt;/a&gt;<br>
-  &lt;/div&gt;<br>
-&lt;/section&gt;
-        </code>
-      </article>
-    </section> -->
-
-    <!-- Ejemplos -->
-    <section class="wr-container block">
-      <h1>¿Te cuesta el desarrollo web?</h1>
-      <h3><span>DWR</span> te ofrece componentes listos para usar.</h3>
+<section class="wr-container block">
+      <h1 class="left-hidden">¿Te cuesta el desarrollo web?</h1>
+      <h3 class="right-hidden"><span>DWR</span> te ofrece componentes listos para usar.</h3>
 
       <div class="row">
-        <img src="img/ejemplos.jpg" alt="Ejemplo 1">
-        <img src="img/ejemplos2.jpg" alt="Ejemplo 2">
-        <img src="img/ejemplos4.jpg" alt="Ejemplo 3">
+        <img src="img/ejemplos.jpg" alt="Ejemplo 1" class="hidden">
+        <img src="img/ejemplos2.jpg" alt="Ejemplo 2" class="hidden">
+        <img src="img/ejemplos4.jpg" alt="Ejemplo 3" class="hidden">
       </div>
 
-      <video src="explicativo.mp4" loop controls width="100%" style="cursor: pointer;" poster="img/design-web.jpg"></video>
+      <video src="explicativo.mp4" loop controls width="100%" style="cursor: pointer;" poster="img/design-web.jpg" class="bottom-hidden"></video>
 
       <div class="docs-link">
-        <a href="docs/docs.html" rel="noopener noreferrer">
+        <a href="docs/docs.html" rel="noopener noreferrer" class="right-hidden">
           <i class="fa-solid fa-up-right-from-square"></i>Ver más
         </a>
       </div>
     </section>
 
     <section class="wr-container block">
-      <h1>¿Necesitas conejos y buenas prácticas?</h1>
-      <h3><span>DWR</span> te ofrece consejos muy útiles para diferentes lenguajes deprogramación.</h3>
+      <h1 class="left-hidden">¿Necesitas conejos y buenas prácticas?</h1>
+      <h3 class="right-hidden"><span>DWR</span> te ofrece consejos muy útiles para diferentes lenguajes deprogramación.</h3>
 
-      <div class="row">
+      <div class="row bottom-hidden">
         <a href="docs/consejos/consejos_js.html" class="consejos js"><img src="img/logo-javascript.svg" alt="Ejemplo 1 JS"></a>
         <a href="docs/consejos/consejos_html.html" class="consejos html"><img src="img/logo-html5.svg" alt="Ejemplo 1 PHP"></a>
         <a href="docs/consejos/consejos_php.html" class="consejos php"><img src="img/logo-php.webp" alt="Ejemplo 1 HTML"></a>
       </div>
 
       <div class="docs-link">
-        <a href="docs/consejos.html" rel="noopener noreferrer">
+        <a href="docs/consejos.html" rel="noopener noreferrer" class="right-hidden">
           <i class="fa-solid fa-up-right-from-square"></i>Ver más
         </a>
       </div>
@@ -172,7 +152,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="pie-pagina">
+  <footer class="pie-pagina bottom-hidden">
     <div class="grupo-1">
       <div class="box">
         <figure>
@@ -216,6 +196,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script/scroll.js"></script>
+  <script src="script/copy.js"></script>
 </body>
 </html>

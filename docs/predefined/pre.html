@@ -10,7 +10,7 @@
 
   <link rel="shortcut icon" href="../../img/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="pre.css">
+  <link rel="stylesheet" href="../../styles/pre.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
@@ -33,10 +33,10 @@
     <nav>
       <ul>
         <li>
-          <a href="../docs.html">Documentación</a>
+          <a href="../../about.html">Acerca de</a>
         </li>
         <li>
-          <a href="../consejos.html">Consejos</a>
+          <a href="../docs.html">Documentación</a>
         </li>
         <li>
           <a href="https://www.facebook.com/aciel.dev2026" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -47,10 +47,17 @@
     </nav>
   </header>
 
+<section class="filters">
+  <button class="filter-btn active" data-filter="all">Todos</button>
+  <button class="filter-btn" data-filter="botones">Botones</button>
+  <button class="filter-btn" data-filter="inputs">Inputs</button>
+  <button class="filter-btn" data-filter="efectos">Efectos</button>
+  <button class="filter-btn" data-filter="animaciones">Animaciones</button>
+</section>
 
 <main>
 
-  <div class="docs-containers">
+  <div class="docs-containers" data-category="botones">
     <h2>Botón con luz</h2>
     <div class="boton-con-luz">
       <button>Button</button>
@@ -65,7 +72,7 @@
 </pre>
   </div>
 
-  <div class="docs-containers">
+  <!-- <div class="docs-containers" data-category="botones">
     <h2>Botón gradiente animado</h2>
     <div class="boton-gradiente-animado">
       <button>Button</button>
@@ -78,9 +85,9 @@
   &lt;/div&gt; 
 </code>
 </pre>
-</div>
+</div> -->
   
-  <div class="docs-containers">
+  <div class="docs-containers" data-category="inputs">
     <h2>Barra de búsqueda</h2>
     <div class="search-container">
       <input type="search" placeholder="Buscar..."><i class="fa fa-search"></i>
@@ -95,7 +102,7 @@
 </pre>
 </div>
 
-<div class="docs-containers">
+<div class="docs-containers" data-category="efectos">
   <h2>Efecto hover</h2>
   <div class="hover-effects">
     <div class="wrapper">
@@ -121,7 +128,7 @@
 </div>
 
 
-<div class="docs-containers">
+<div class="docs-containers" data-category="animaciones">
   <h2>Animación circular</h2>
   <div class="spinner-container">
     <div class="spinner"></div>
@@ -137,7 +144,7 @@
 </div>
 
 
-<div class="docs-containers">
+<div class="docs-containers" data-category="efectos">
   <h2>Efecto de máscara circular</h2>
   <div class="mask-radial-container">
     <div class="img-container">
@@ -157,7 +164,7 @@
 </div>
 
 
-<div class="docs-containers">
+<div class="docs-containers" data-category="efectos">
   <h2>Efecto de máscara lineal</h2>
   <div class="mask-linear-container">
     <div class="img-container">
@@ -177,7 +184,7 @@
 </div>
 
 
-<div class="docs-containers">
+<div class="docs-containers" data-category="efectos">
   <h2>Efecto glass</h2>
   <div class="glass-effect-container">
     <img src="https://img.freepik.com/foto-gratis/agricultora-asiatica-ve-crecimiento-pina-granja-mujer-joven-bonita-granjero-pie-tierras-cultivo-brazos-levantados-alegria-euforica-alegria_1150-37894.jpg?semt=ais_hybrid&w=740&q=80" alt="Fondo" class="glass-back-img">
@@ -207,7 +214,7 @@
 </pre>
 </div>
 
-<div class="docs-containers">
+<div class="docs-containers" data-category="efectos">
   <h2>Efecto Link Fill</h2>
   <nav class="links-nav">
     <ul>
@@ -238,7 +245,7 @@
 </div>
 
 
-<div class="docs-containers">
+<div class="docs-containers" data-category="animaciones">
   <h2>Efecto Escritura <br> (20 steps)</h2>
   <div class="typing-container">
       <p class="typing">Hello World</p>
@@ -307,6 +314,36 @@
     </div>
   </footer>
     
+<script>
+  const buttons = document.querySelectorAll(".filter-btn");
+  const items = document.querySelectorAll(".docs-containers");
 
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+
+      document.querySelector(".active").classList.remove("active");
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      items.forEach(item => {
+        if (filter === "all" || item.dataset.category === filter) {
+          item.style.display = "block";
+          setTimeout(() => {
+            item.style.opacity = "1";
+            item.style.transform = "translateY(0)";
+          }, 50);
+        } else {
+          item.style.opacity = "0";
+          item.style.transform = "translateY(20px)";
+          setTimeout(() => {
+            item.style.display = "none";
+          }, 300);
+        }
+      });
+
+    });
+  });
+</script>
 </body>
 </html>

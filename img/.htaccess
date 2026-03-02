@@ -1,8 +1,0 @@
-# Bloquear acceso directo a la lista de archivos de la carpeta
-Options -Indexes
-
-# Permitir acceso normal a archivos (como imágenes)
-<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|bmp)$">
-    Order allow,deny
-    Allow from all
-</FilesMatch>
