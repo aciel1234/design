@@ -330,6 +330,7 @@ nav ul li a:hover {
   background: #0a0f1c;
   color: white;
   text-align: center;
+  overflow: hidden;
 }
 
 .timeline h2 {

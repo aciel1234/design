@@ -228,6 +228,10 @@ p code {
 
 @media (max-width: 900px) {
 
+  .logo a h3 {
+    display: none;
+  }
+
   main {
     padding: 140px 20px 80px 20px;
   }
