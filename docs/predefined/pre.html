@@ -90,17 +90,19 @@
   
   <div class="docs-containers" data-category="inputs">
     <h2>Barra de búsqueda</h2>
-    <div class="search-container">
+    <div class="search-container" style="display: block;">
       <input type="search" placeholder="Buscar..."><i class="fa fa-search"></i>
     </div>
   
-<pre>
-<code>
-  &lt;div class="search-container"&gt;
-    &lt;input type="search" placeholder="Buscar..."&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;
-  &lt;/div&gt;
-</code>
-</pre>
+  <pre>
+  <code>
+    &lt;div class="search-container"  style="display: block;"&gt;
+      &lt;input type="search" placeholder="Buscar..."&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  </code>
+  </pre>
+  <br>
+  <p>* Solo funciona bien con display: block.</p>
 </div>
 
 <div class="docs-containers" data-category="efectos">
@@ -227,7 +229,7 @@
       </li>
     </ul>
   </nav>
-
+<br>
 
 <pre>
 <code>
@@ -248,18 +250,20 @@
 
 <div class="docs-containers" data-category="animaciones">
   <h2>Efecto Escritura <br> (20 steps)</h2>
-  <div class="typing-container">
+  <div class="typing-container" style="display: block;">
       <p class="typing">Hello World</p>
   </div>
 
 
 <pre>
 <code>
-  &lt;div class="typing-container"&gt;
+  &lt;div class="typing-container" style="display: block;"&gt;
     &lt;p class="typing"&gt;Hello World&lt;/p&gt;
   &lt;/div&gt;
 </code>
 </pre>
+<br>
+<p>* Solo funciona bien con display: block.</p>
 </div>
 
 <div class="docs-containers" data-category="cards">
