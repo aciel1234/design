@@ -20,6 +20,17 @@
   <!-- <link rel="stylesheet" href="../../css/web-resources.css"> -->
 
   <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+
+  <style>
+    .input-field>input:focus ~ label,
+    .input-field>input:valid ~ label {
+      top: 50px;
+      left: 70px;
+    }
+    .input-field>label {
+      left: 70px;
+    }
+  </style>
 </head>
 <body>
     <header id="header">
@@ -346,7 +357,7 @@
 </pre>
 </div>
 
-<div class="docs-containers" data-category="animaciones">
+<div class="docs-containers" data-category="inputs" style="display: block;">
   <h2>Texto de input flotante</h2>
   <div class="input-field" style="display: block;">
     <input type="text" required spellcheck="false">
@@ -368,7 +379,7 @@
     <code>
     .input-field>input:focus ~ label,
     .input-field>input:valid ~ label {
-      background: red;
+      background: blue;
     }
     </code>
   </pre>
