@@ -521,7 +521,7 @@
     .input-field {
       position: relative;
     }
-    .input-field input {
+    .input-field>input {
       width: 350px;
       height: 60px;
       border-radius: 6px;
@@ -532,7 +532,7 @@
       outline: none;
       color: #fff;
     }
-    .input-field label {
+    .input-field>label {
       position: absolute;
       top: 50%;
       left: 15px;
