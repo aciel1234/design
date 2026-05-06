@@ -276,6 +276,41 @@
       <div class="curve_two"></div>
     </div>
   </div>
+
+  <pre>
+  <code>
+    &lt;div class="container"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="cardImg"&gt;
+          &lt;img src="https://img.freepik.com/foto-gratis/agricultora-asiatica-ve-crecimiento-pina-granja-mujer-joven-bonita-granjero-pie-tierras-cultivo-brazos-levantados-alegria-euforica-alegria_1150-37894.jpg?semt=ais_hybrid&w=740&q=80" alt="Fondo"&gt;
+        &lt;/div&gt;
+        &lt;div class="tag"&gt;
+          &lt;p&gt;Texto de ejemplo&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="curve_one"&gt;&lt;/div&gt;
+        &lt;div class="curve_two"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  </code>
+  </pre>
+<br>
+  <p>* Para arreglar los colores que sobresalen y se adapte a diferentes colores de fondo, deben incluir en su archivo .css las siguientes líneas de código:</p>
+  <br>
+  <pre>
+    <code>
+    .tag {
+      background-color: red;
+    }
+    .tag::after {
+      box-shadow: 0.375rem 0.375rem red;
+    }
+    .curve_two {
+      box-shadow: 0.375rem 0.375rem red;
+    }
+    </code>
+  </pre>
+  <br>
+  <p>* Los colores se cambian en dependencia del fondo que se esté usando.</p>
 </div>
 
 

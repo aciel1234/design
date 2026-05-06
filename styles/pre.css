@@ -249,9 +249,7 @@ code {
     padding: 2rem;
   }
 
-  .docs-containers > div:not(pre) {
-    display: block;
-  }
+  
 
   .grupo-1 {
     flex-direction: column;
