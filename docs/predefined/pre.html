@@ -33,6 +33,11 @@
   </style>
 </head>
 <body>
+
+  <div class="spinner-container" id="spinner-container">
+    <div class="spinner"></div>
+  </div>
+
     <header id="header">
     <div class="logo">
       <a href="../../index.html">
@@ -480,6 +485,13 @@
 
     });
   });
+
+  const spinner_container = document.getElementById("spinner-container")
+  window.onload(function() {
+    setTimeout(() => {
+      spinner_container.style.display = "none"
+    }, 2000)
+  })
 </script>
 </body>
 </html>
