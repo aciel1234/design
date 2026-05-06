@@ -41,8 +41,8 @@ function clipboardCopy() {
 
       // Mostrar mensaje
       feedbackElement.innerHTML = `
-        <i class="fa-regular fa-clipboard"></i>
-        <p>Texto copiado al portapapeles</p>
+        <p><i class="fa-regular fa-clipboard"></i>
+        Texto copiado al portapapeles</p>
       `;
 
       // Ocultar después de 1 segundo
