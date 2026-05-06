@@ -314,7 +314,7 @@
     </code>
   </pre>
   <br>
-  <p>* Los colores se cambian en dependencia del fondo que se esté usando.</p>
+  <p>* Cambia los colores según el fondo que se esté usando.</p>
 </div>
 
 
@@ -344,6 +344,35 @@
   &lt;/div&gt;
 </code>
 </pre>
+</div>
+
+<div class="docs-containers" data-category="animaciones">
+  <div class="input-field">
+    <input type="text" required spellcheck="false">
+    <label>Escribe tu nombre</label>
+  </div>
+
+  <pre>
+    <code>
+      &lt;div class="input-field"&gt;
+        &lt;input type="text" required spellcheck="false"&gt;
+        &lt;label>Escribe tu nombre&lt;/label&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+<br>
+  <p>* Para cambiar el color de fondo del texto flotante deben añadir esta línea de código en su archivo .css</p>
+<br>
+  <pre>
+    <code>
+    .input-field>input:focus ~ label,
+    .input-field>input:valid ~ label {
+      background: red;
+    }
+    </code>
+  </pre>
+  <br>
+  <p>* Cambia los colores según el fondo que se esté usando.</p>
 </div>
 
 
