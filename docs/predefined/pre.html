@@ -34,9 +34,7 @@
 </head>
 <body>
 
-  <div class="spinner-container" id="spinner-container">
-    <div class="spinner"></div>
-  </div>
+  <div class="loader-page" id="loader-page"></div>
 
     <header id="header">
     <div class="logo">
@@ -486,12 +484,13 @@
     });
   });
 
-  const spinner_container = document.getElementById("spinner-container")
-  window.onload(function() {
+  window.addEventListener('load', () => {
+    let spiner = document.getElementById("loader-page")
     setTimeout(() => {
-      spinner_container.style.display = "none"
+      spiner.style.opacity = 0
+      spiner.style.display = "none"
     }, 2000)
-  })
+})
 </script>
 </body>
 </html>
