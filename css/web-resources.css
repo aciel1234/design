@@ -552,3 +552,18 @@
       padding: 0 10px;
       background: white;
     }
+
+    /* Texto con imagen de fondo */
+    .text-image-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("https://img.freepik.com/foto-gratis/agricultora-asiatica-ve-crecimiento-pina-granja-mujer-joven-bonita-granjero-pie-tierras-cultivo-brazos-levantados-alegria-euforica-alegria_1150-37894.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    animation: animate 20s linear infinite;
+  }
+  @keyframes animate {
+    to {
+      background-position-x: -500px;
+    }
+  }

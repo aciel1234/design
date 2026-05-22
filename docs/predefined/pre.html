@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="description" content="Poderosa librería para frontend devs. Crea componentes predefinidos y estilos CSS avanzados.">
   <meta name="author" content="Aciel Olivera García">
 
@@ -375,9 +375,9 @@
       &lt;/div&gt;
     </code>
   </pre>
-<br>
+  <br>
   <p>* Para cambiar el color de fondo del texto flotante deben añadir esta línea de código en su archivo .css</p>
-<br>
+  <br>
   <pre>
     <code>
     .input-field>input:focus ~ label,
@@ -400,6 +400,29 @@
   </pre>
 </div>
 
+
+<div class="docs-containers" data-category="texto">
+  <h2>Texto con imagen de fondo</h2>
+  <div class="text-image-container">
+    <h2 class="text-image-text">Design Web Resources</h2>
+  </div>
+</div>
+
+
+<pre>
+<code>
+  &lt;div id="container"&gt;
+  Ejemplo
+  &lt;div id="flip"&gt;
+    &lt;div&gt;&lt;div&gt;de&lt;/div&gt&lt;/div&gt;
+    &lt;div&gt;&lt;div&gt;maravilloso&lt;/div&gt&lt;/div&gt;
+    &lt;div&gt;&lt;div&gt;efecto&lt;/div&gt&lt;/div&gt;
+  &lt;/div&gt;
+  de Volteo
+  &lt;/div&gt;
+</code>
+</pre>
+</div>
 
 
 
@@ -454,6 +477,14 @@
   </footer>
     
 <script>
+    window.addEventListener('load', () => {
+    let spiner = document.getElementById("loader-page")
+    setTimeout(() => {
+      spiner.style.opacity = 0
+      spiner.style.display = "none"
+    }, 2000)
+})
+
   const buttons = document.querySelectorAll(".filter-btn");
   const items = document.querySelectorAll(".docs-containers");
 
@@ -483,14 +514,6 @@
 
     });
   });
-
-  window.addEventListener('load', () => {
-    let spiner = document.getElementById("loader-page")
-    setTimeout(() => {
-      spiner.style.opacity = 0
-      spiner.style.display = "none"
-    }, 2000)
-})
 </script>
 </body>
 </html>
