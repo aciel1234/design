@@ -449,6 +449,29 @@
   <button class="btn-shine">Botón Brillante</button>
 </div>
 
+<button id="scrollTopBtn" class="scroll-top">
+
+    <svg class="progress-ring" width="70" height="70">
+
+        <circle
+            class="progress-bg"
+            cx="35"
+            cy="35"
+            r="30"
+        />
+
+        <circle
+            class="progress"
+            cx="35"
+            cy="35"
+            r="30"
+        />
+
+    </svg>
+
+    <span>↑</span>
+
+</button>
 
 </main>
 
@@ -538,6 +561,61 @@
 
     });
   });
+
+  const button = document.getElementById("scrollTopBtn");
+
+const progressCircle =
+document.querySelector(".progress");
+
+const radius = 30;
+
+const circumference =
+2 * Math.PI * radius;
+
+progressCircle.style.strokeDasharray =
+circumference;
+
+progressCircle.style.strokeDashoffset =
+circumference;
+
+window.addEventListener("scroll", () => {
+
+    const scrollTop =
+    window.scrollY;
+
+    const docHeight =
+    document.documentElement.scrollHeight -
+    window.innerHeight;
+
+    const scrollPercent =
+    scrollTop / docHeight;
+
+    const offset =
+    circumference -
+    (scrollPercent * circumference);
+
+    progressCircle.style.strokeDashoffset =
+    offset;
+
+    if(scrollTop > 300){
+
+        button.classList.add("show");
+
+    }else{
+
+        button.classList.remove("show");
+    }
+
+});
+
+button.addEventListener("click", () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
 </script>
 </body>
 </html>

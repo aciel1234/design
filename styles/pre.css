@@ -305,3 +305,98 @@ code {
     animation: rotarload 1s ease-out infinite;
     transform: rotate(0deg);
   }
+
+/* ==========================================
+              BOTON IR ARRIBA
+============================================*/
+.scroll-top{
+
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:70px;
+    height:70px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:#111827;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.scroll-top.show{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:translateY(0);
+}
+
+.scroll-top span{
+
+    position:absolute;
+
+    color:white;
+
+    font-size:28px;
+    font-weight:bold;
+
+    z-index:2;
+}
+
+.progress-ring{
+
+    position:absolute;
+
+    transform:rotate(-90deg);
+}
+
+.progress-bg{
+
+    fill:none;
+
+    stroke:#374151;
+
+    stroke-width:4;
+}
+
+.progress{
+
+    fill:none;
+
+    stroke:#3bf64b;
+
+    stroke-width:4;
+
+    stroke-linecap:round;
+
+    stroke-dasharray:188.5;
+    stroke-dashoffset:188.5;
+
+    transition:.15s;
+}
+
+.scroll-top:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 10px 25px rgba(59, 246, 90, 0.4);
+}
