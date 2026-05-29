@@ -123,10 +123,15 @@ const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(1
 
 <div class="docs-containers">
 <br><br>
-<h2>Generador de colores aleatorios</h2>
+<h2>Mostrar y ocultar contraseña</h2>
 <pre>
 <code class="language-javascript">
-const getRandomColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+show.addEventListener("click", () => {
+    password.type =
+        password.type === "password"
+        ? "text"
+        : "password";
+});
 </code>
 </pre>
 </div>
@@ -200,6 +205,21 @@ const celsiusToFahrenheit = celsius => (celsius * 9/5 + 32);
 <code class="language-javascript">
 const arrayToObject = (arr, key) => arr.reduce((obj, item) => {
       obj[item[key]] = item; return obj; }, {});
+</code>
+</pre>
+</div>
+
+<div class="docs-containers">
+<br><br>
+<h2>Comprobar si el usuario está online</h2>
+<pre>
+<code class="language-javascript">
+window.addEventListener("online", () => {
+    console.log("Conectado");
+});
+window.addEventListener("offline", () => {
+    console.log("Sin internet");
+});
 </code>
 </pre>
 </div>
