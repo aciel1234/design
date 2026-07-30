@@ -554,6 +554,41 @@
     }
 
 
+    /* Float input 2 */
+    .float-input2 {
+            position: relative;
+            width: 200px;
+        }
+        .float-input2 input {
+            width: 100%;
+            padding: 14px 10px 6px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: 0.2s;
+        }
+        .float-input2 label {
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            font-size: 14px;
+            color: #9ca3af;
+            pointer-events: none;
+            transition: 0.2s;
+        }
+        .float-input2 input:focus,
+        .float-input2 input:not(:placeholder-shown) {
+            border-color: #3b82f6;
+        }
+        .float-input2 input:focus + label,
+        .float-input2 input:not(:placeholder-shown) + label {
+            top: 2px;
+            font-size: 10px;
+            color: #3b82f6;
+        }
+
+
   /* Galería de imagenes */
   .gallery-container{
     min-height:100vh;
